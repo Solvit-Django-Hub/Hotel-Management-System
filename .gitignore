@@ -1,0 +1,6 @@
+hotel-management/
+__pycache__/
+*.pyc
+.env
+db.sqlite3
+*.log
