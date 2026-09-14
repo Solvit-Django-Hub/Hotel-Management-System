@@ -12,7 +12,7 @@ class Booking(models.Model):
         (CONFIRMED, 'Confirmed'),
         (CANCELLED, 'Cancelled'),
     ]   
-    booking_id = models.BigAutoField(auto_created=True, unique=True, serializable=False, primary_key=True, verbose_name='ID')
+    booking_id = models.BigAutoField(auto_created=True, unique=True, serialize=False, primary_key=True, verbose_name='ID')
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     guest = models.ForeignKey(Guest, on_delete=models.CASCADE)
     status = models.CharField(max_length=20, choices=Status_choices, default=PENDING)
