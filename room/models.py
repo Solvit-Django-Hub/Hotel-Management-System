@@ -13,7 +13,7 @@ class Room(models.Model):
         (MAINTENANCE, 'Maintenance'),
         (CLEANING, 'Cleaning'),
     ]
-    room_id = models.BigAutoField(auto_created=True, unique=True, serializable=True, primary_key=True, verbose_name='Room ID')
+    room_id = models.BigAutoField(auto_created=True, unique=True, serialize=False, primary_key=True, verbose_name='Room ID')
     room_number = models.CharField(max_length=10, unique=True)
     room_type = models.ForeignKey(RoomType, on_delete=models.CASCADE)
     floor = models.IntegerField()

@@ -1,7 +1,7 @@
 from django.db import models
 
 class Guest(models.Model):
-    guest_id = models.BigAutoField(auto_created=True, unique=True, serializable=False, primary_key=True, verbose_name='Guest ID')
+    guest_id = models.BigAutoField(auto_created=True, unique=True, serialize=False, primary_key=True, verbose_name='Guest ID')
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField(max_length=30)
